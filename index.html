@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Không gian lưu trữ của Thu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .caption {
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        audio {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Visual Diary</h1>
+
+    <div class="gallery">
+        <!-- BẮT ĐẦU: Mỗi thẻ card là một bức ảnh -->
+        
+        <!-- Ảnh 1 -->
+        <div class="card">
+            <!-- Thay 'anh1.jpg' bằng tên file ảnh bạn upload -->
+            <img src="anh1.jpg" alt="Ảnh 1">
+            <div class="card-content">
+                <p class="caption">Caption ngắn cho ảnh 1 ở đây.</p>
+                <!-- Thay link nhạc của bạn vào src bên dưới -->
+                <audio controls>
+                    <source src="nhac1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Ảnh 2 -->
+        <div class="card">
+            <img src="anh2.jpg" alt="Ảnh 2">
+            <div class="card-content">
+                <p class="caption">Caption ngắn cho ảnh 2 ở đây.</p>
+                <audio controls>
+                    <source src="nhac2.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Bạn có thể copy đoạn <div class="card">...</div> để thêm nhiều ảnh hơn -->
+
+    </div>
+
+</body>
+</html>
